@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,16 +12,16 @@
       <h1>Portfólio</h1>
     </header>
     <section>
-      <div class="profile-container">
+      <div class="container-perfil">
         <h2>Hugo Mamona</h2>
         <p>Estudante | Universidade Senai Cimatec | Engenharia da Computação</p>
-        <div class="profile-picture">
-          <img src="profile.jpg" alt="foto" />
+        <div class="foto-perfil">
+          <img src="profile.jpg" alt="Foto do perfil" />
         </div>
       </div>
     </section>
     <section>
-      <h3>Informações</h3>
+      <h3>Informações Pessoais</h3>
       <p>
         Sou estudante de Engenharia da Computação pelo Senai Cimatec, atualmente
         no 7º semestre.<br />
@@ -30,63 +30,115 @@
     </section>
     <section>
       <h3>Em desenvolvimento</h3>
-      <p class="project-description">
-        Um website que permitirá aos usuários simular diferentes estratégias de
-        investimento utilizando dados financeiros constantemente atualizados,
-        sendo voltada tanto para iniciantes quanto para investidores mais
-        avançados.
-      </p>
-      <div class="flip-container" onclick="flipCard(this)">
-        <div class="flipper">
-          <div class="front">Simulador de Investimentos</div>
-          <div class="back">
-            <a href="https://github.com/MatheusMuinos/simula.invest_FullStack" target="_blank" rel="noopener noreferrer"
+      <div class="container-destaque" onclick="virarCartao(this)">
+        <div class="cartao">
+          <div class="frente">
+            <h4>Simulador de Investimentos</h4>
+            <p class="descricao-projeto">
+              Um website que permitirá aos usuários simular diferentes
+              estratégias de investimento utilizando dados financeiros
+              constantemente atualizados, sendo voltada tanto para iniciantes
+              quanto para investidores mais avançados.
+            </p>
+          </div>
+          <div class="verso">
+            <a
+              href="https://github.com/MatheusMuinos/simula.invest_FullStack"
+              target="_blank"
+              rel="noopener noreferrer"
               >Repositório</a
             >
           </div>
         </div>
       </div>
-      <div class="project-image">
+      <div class="imagem-projeto">
         <img src="simulainvest.png" alt="Simulador de Investimentos" />
       </div>
     </section>
     <section>
-      <h3>Projetos</h3>
-      <ul>
-        <li>
-          Modelagem e implementação de esquema de banco de dados para uma escola
-          de música, na matéria Banco de Dados
-        </li>
-        <li>Jogo de Xadrez para matéria de POO</li>
-        <li>
-          Adaptação do jogo Slay the Spire para matéria de Algoritmos e
-          Estruturas de Dados
-        </li>
-        <div class="flip-container" onclick="flipCard(this)">
-          <div class="flipper">
-            <div class="front">
-              Analisador léxico para matéria de Compiladores
+      <h3>Projetos Realizados</h3>
+      <div class="grade-projetos">
+        <div class="container-cartao" onclick="virarCartao(this)">
+          <div class="cartao">
+            <div class="frente">
+              <h4>Modelagem de banco de dados</h4>
+              <p>
+                Modelagem e implementação de esquema de banco de dados
+                relacional para uma escola de música, para matéria Banco de
+                Dados
+              </p>
             </div>
-            <div class="back">
-              <a href="https://github.com/Prysthon/static-Checker" target="_blank" rel="noopener noreferrer"
+            <div class="verso">
+              <p>Projeto acadêmico</p>
+            </div>
+          </div>
+        </div>
+        <div class="container-cartao" onclick="virarCartao(this)">
+          <div class="cartao">
+            <div class="frente">
+              <h4>Jogo de Xadrez</h4>
+              <p>
+                Desenvolvimento de jogo de xadrez feito em Java para matéria de
+                Programação Orientada a Objetos
+              </p>
+            </div>
+            <div class="verso">
+              <p>Projeto acadêmico</p>
+            </div>
+          </div>
+        </div>
+        <div class="container-cartao" onclick="virarCartao(this)">
+          <div class="cartao">
+            <div class="frente">
+              <h4>Slay the Spire</h4>
+              <p>
+                Adaptação do jogo Slay the Spire em linguagem C, para matéria de
+                Algoritmos e Estruturas de Dados
+              </p>
+            </div>
+            <div class="verso">
+              <p>Projeto acadêmico</p>
+            </div>
+          </div>
+        </div>
+        <div class="container-cartao" onclick="virarCartao(this)">
+          <div class="cartao">
+            <div class="frente">
+              <h4>Analisador Léxico</h4>
+              <p>
+                Implementação de analisador léxico em Python para matéria de
+                Compiladores
+              </p>
+            </div>
+            <div class="verso">
+              <a
+                href="https://github.com/Prysthon/static-Checker"
+                target="_blank"
+                rel="noopener noreferrer"
                 >Repositório</a
               >
             </div>
           </div>
         </div>
-      </ul>
+      </div>
     </section>
     <section>
       <h3>Contato</h3>
       <p>Email: hugo.andrade@aln.senaicimatec.edu.br</p>
       <p>
-        GitHub: <a href="https://github.com/hmma0308" target="_blank" rel="noopener noreferrer">github.com/hmma0308</a>
+        GitHub:
+        <a
+          href="https://github.com/hmma0308"
+          target="_blank"
+          rel="noopener noreferrer"
+          >github.com/hmma0308</a
+        >
       </p>
     </section>
     <script>
-      function flipCard(card) {
-        const flipper = card.querySelector(".flipper");
-        flipper.classList.toggle("flipped");
+      function virarCartao(elemento) {
+        const cartao = elemento.querySelector(".cartao");
+        cartao.classList.toggle("virado");
       }
     </script>
   </body>
